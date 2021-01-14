@@ -5,6 +5,7 @@ import Buildcontrols from '../../components/Burger/Buildcontrols/Buildcontrols';
 import Modal from '../../components/UI/Modal/Modal';
 import OrderSummary from '../../components/Burger/OrderSummary/OrderSummary';
 import Spinner from '../../components/UI/Spinner/Spinner';
+import withErrorHAndler from '../../hoc/withErrorHandler/withErrorHandler'
 import axios from '../../axios-order';
 
 
@@ -56,7 +57,7 @@ class BurgerBuilder extends Component {
            ingredients : this.state.ingredients,
            price : this.state.totalPrice,
            customer : {
-               name: 'anukul saini',
+               name: 'anukul saini 2',
                address : {
                    street : 'krishna market road',
                    city : 'Dehradun',
@@ -172,4 +173,4 @@ class BurgerBuilder extends Component {
     }
 }
  
-export default BurgerBuilder;
+export default withErrorHAndler(BurgerBuilder,axios);
