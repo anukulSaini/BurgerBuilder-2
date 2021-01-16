@@ -156,6 +156,21 @@ class BurgerBuilder extends Component {
         if (this.state.Loading){
            orderSummary =  <Spinner></Spinner>
         }
+
+        let burger = 
+        <Aux>
+        <Burger ingredients = {this.state.ingredients}/>
+        <Buildcontrols
+        ingredientAdded={this.addIngredientHandler}
+        ingredientremoved={this.removeIngredientHandler}
+        disabled ={disabledInfo}
+        purchasable={this.state.purchasable}
+        price ={this.state.totalPrice}
+        ordered={this.purchaseHandler}
+       />
+       </Aux>;
+
+
         return ( <Aux>
             <Modal show={this.state.purchasing}
                    modalClosed={this.purchaseCancelHandler}>
