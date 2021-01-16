@@ -23,7 +23,8 @@ class BurgerBuilder extends Component {
         totalPrice:4,
         purchasable:false,
         purchasing:false,
-        Loading:false
+        Loading:false,
+        error:false
     }
 
 
@@ -31,6 +32,9 @@ class BurgerBuilder extends Component {
        axios.get('https://react-my-burger-335c8-default-rtdb.firebaseio.com/ingredients2.json')
             .then(response=>{
            this.setState({ingredients:response.data});
+       })
+       .catch(error =>{
+           this.setState({error:true})
        });
     }
 
