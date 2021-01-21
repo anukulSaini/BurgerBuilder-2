@@ -1,15 +1,7 @@
-.Posts {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    width: 80%;
-    margin: auto;
-}
-
 .Blog ul {
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
     width: 100%;
     text-align: center;
 }
@@ -25,6 +17,7 @@
 }
 
 .Blog a:hover,
-.Blog a:active{
-    color: coral;
+.Blog a:active,
+.Blog a.active {
+    color: #fa923f;
 }
