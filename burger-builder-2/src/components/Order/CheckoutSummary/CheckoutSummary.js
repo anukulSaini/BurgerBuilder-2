@@ -10,7 +10,16 @@ const chekoutSummary = (props) => {
                 <div style ={{width:'300px', height: '300px' , margin :'auto'}}>
                      <Burger  ingredients ={props.ingredients}/>
                 </div>
-                <Button/>
+                   <Button 
+                    clicked
+                    btnType="Danger">
+                    CANCEL
+                    </Button>
+                <Button 
+               clicked
+               btnType="Success">
+               CONTINUE
+               </Button>
             </div>
          );
     
