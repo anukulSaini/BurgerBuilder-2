@@ -12,12 +12,12 @@ const chekoutSummary = (props) => {
                      <Burger  ingredients ={props.ingredients}/>
                 </div>
                    <Button 
-                    clicked
+                    clicked={props.chekoutCancel}
                     btnType="Danger">
                     CANCEL
                     </Button>
                 <Button 
-               clicked
+               clicked={props.chekouContinued}
                btnType="Success">
                CONTINUE
                </Button>
