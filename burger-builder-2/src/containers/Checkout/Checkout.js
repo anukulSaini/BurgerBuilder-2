@@ -10,10 +10,23 @@ class Checkout extends Component {
             cheese:1
         }
     }
+    chekouContinuedHandler= () =>{
+
+    }
+
+
+    checkoutCancelledHandler= () =>{
+        
+    }
+
+
+
     render() { 
         return ( 
             <div>
-                <CheckoutSummary ingredients={this.state.ingredients}/>
+                <CheckoutSummary ingredients={this.state.ingredients}
+                checkoutCancelled={}
+                chekouContinued={}/>
             </div>
          );
     }
