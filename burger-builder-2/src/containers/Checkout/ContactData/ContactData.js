@@ -17,13 +17,19 @@ class ContactData extends Component {
     }
 
     render () {
-            <form>
+         return (
+             <div className={classes.ContactData}>
+                 <h1>Form</h1>
+                 <form>
                 <input className={classes.Input} type="text" name="name" placeholder="Your Name" />
                 <input className={classes.Input} type="email" name="email" placeholder="Your Mail" />
                 <input className={classes.Input} type="text" name="street" placeholder="Street" />
                 <input className={classes.Input} type="text" name="postal" placeholder="Postal Code" />
                 <Button btnType="Success" clicked={this.orderHandler}>ORDER</Button>
             </form>
+             </div>
+         );
+
        
     }
 }
