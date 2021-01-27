@@ -12,7 +12,7 @@ const chekoutSummary = (props) => {
                      <Burger  ingredients ={props.ingredients}/>
                 </div>
                    <Button 
-                    clicked={props.chekoutCancel}
+                    clicked={props.chekoutCancelled}
                     btnType="Danger">
                     CANCEL
                     </Button>
