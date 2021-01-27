@@ -44,20 +44,24 @@ class ContactData extends Component {
         }
 
     render () {
-         return (
-             <div className={classes.ContactData}>
-                 <h1>Form</h1>
-                 <form>
+        let form = (
+            <form>
                 <input className={classes.Input} type="text" name="name" placeholder="Your Name" />
                 <input className={classes.Input} type="email" name="email" placeholder="Your Mail" />
                 <input className={classes.Input} type="text" name="street" placeholder="Street" />
                 <input className={classes.Input} type="text" name="postal" placeholder="Postal Code" />
                 <Button btnType="Success" clicked={this.orderHandler}>ORDER</Button>
             </form>
-             </div>
-         );
-
-       
+        );
+        if ( this.state.loading ) {
+            form = <Spinner />;
+        }
+        return (
+            <div className={classes.ContactData}>
+                <h4>Enter your Contact Data</h4>
+                {form}
+            </div>
+        );
     }
 }
 
