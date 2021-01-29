@@ -3,15 +3,18 @@ import Order from '../../components/Order/Order';
 import axios from '../../axios-order';
 
 class Orders extends Component {
-    state = {  }
+    state = { 
+        orders : [],
+        loading : true
+     }
 
     componentDidMount () {
-        axios.get('https://react-my-burger-335c8-default-rtdb.firebaseio.com/ingredients2.json')
+        axios.get('/orders.json')
              .then(response=>{
-            this.setState({ingredients:response.data});
+            this.setState({loading:false});
         })
         .catch(error =>{
-            this.setState({error:true})
+            this.setState({loading:false})
         });
      }
     render() { 
