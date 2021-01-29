@@ -27,7 +27,7 @@ class ContactData extends Component {
                 address: {
                     street: 'Teststreet 1',
                     zipCode: '41351',
-                    country: 'Germany'
+                    country: 'india'
                 },
                 email: 'test@test.com'
             },

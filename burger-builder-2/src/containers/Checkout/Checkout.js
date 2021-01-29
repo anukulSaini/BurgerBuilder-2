@@ -10,7 +10,7 @@ class Checkout extends Component {
             cheese: 1,
             meat: 1,
             bacon: 1},
-        price :0
+        price :11
     }
 
 
