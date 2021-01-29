@@ -5,6 +5,8 @@ const  order =(props) => {
     return(
           <div className={Classes.Order}>
               <p>ingredients: salad(1)</p>
+              <p>ingredients: salad(2)</p>
+
           </div>
     );
 }
