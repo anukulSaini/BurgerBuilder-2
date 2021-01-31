@@ -17,7 +17,10 @@ const input = (props) => {
 
 
         return ( 
-            <div></div>
+            <div>
+                <label>{props.label}</label>
+                {inputElement}
+            </div>
          );
    
 }
