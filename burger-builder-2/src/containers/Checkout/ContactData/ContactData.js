@@ -67,7 +67,9 @@ class ContactData extends Component {
         event.preventDefault();
         this.setState( { loading: true } );
         const order = {
-
+            ingredients: this.props.ingredients,
+            price: this.props.price,
+            orderData: formData
         }
         axios.post( '/orders.json', order )
             .then( response => {
@@ -82,7 +84,7 @@ class ContactData extends Component {
     render () {
         let form = (
             <form>
-                <Input  inputtype = "input" type="text" name="name" placeholder="Your Name" />
+                <Input  elementType="..."  elementConfig="..." value="..." />
                 <Input  inputtype = "input"  type="email" name="email" placeholder="Your Mail" />
                 <Input  inputtype = "input"   type="text" name="street" placeholder="Street" />
                 <Input  inputtype = "input"  type="text" name="postal" placeholder="Postal Code" />
