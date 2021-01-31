@@ -1,4 +1,5 @@
 import React from 'react';
+import classes from './Input.css';
 
 const input = (props) => {
      
@@ -6,19 +7,19 @@ const input = (props) => {
 
       switch(props.inputType){
           case('input'):
-          inputElement= <input {...props}></input>
+          inputElement= <input className={classes.InputElement} {...props}></input>
           break;
           case('textarea'):
-          inputElement=<textarea{...props}></textarea>
+          inputElement=<textarea classNam={classes.InputElement} {...props}></textarea>
           break;
           default:
-              inputElement=<input{...props}></input>
+              inputElement=<input className={classes.InputElement} {...props}></input>
       }
 
 
         return ( 
-            <div>
-                <label>{props.label}</label>
+            <div className={classes.Input}>
+                <label className={classes.Label}>{props.label}</label>
                 {inputElement}
             </div>
          );
